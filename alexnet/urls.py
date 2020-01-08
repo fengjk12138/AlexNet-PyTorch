@@ -1,4 +1,4 @@
-# Copyright 2019 Lorna Authors. All Rights Reserved.
+# Copyright 2020 Lorna Authors. All Rights Reserved.
 # Licensed under the Apache License, Version 2.0 (the "License");
 #   you may not use this file except in compliance with the License.
 #   You may obtain a copy of the License at
@@ -28,7 +28,7 @@ from api.visual_api import index
 
 # noinspection PyInterpreter
 urlpatterns = [
-  url(r'^api/dcgan/$', CartoonSister.as_view(), name="DCGAN"),
+  url(r'^api/alexnet', CartoonSister.as_view(), name="AlexNet Classifier"),
   path('', index),
   path('admin/', admin.site.urls),
   url('index/', index, name="index"),

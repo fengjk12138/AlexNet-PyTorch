@@ -52,7 +52,7 @@ MIDDLEWARE = [
   'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'cls.urls'
+ROOT_URLCONF = 'alexnet.urls'
 
 TEMPLATES = [
   {
@@ -70,7 +70,7 @@ TEMPLATES = [
   },
 ]
 
-WSGI_APPLICATION = 'cls.wsgi.application'
+WSGI_APPLICATION = 'alexnet.wsgi.application'
 
 DATABASES = {
   'default': {

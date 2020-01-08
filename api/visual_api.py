@@ -4,7 +4,7 @@ from django.shortcuts import render
 from rest_framework.views import APIView
 
 # dcgan
-from utils.test import generate
+from alexnet import AlexNet
 
 
 # model

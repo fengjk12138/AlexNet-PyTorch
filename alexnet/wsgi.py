@@ -1,4 +1,4 @@
-# Copyright 2019 DayHR Authors. All Rights Reserved.
+# Copyright 2020 Lorna Authors. All Rights Reserved.
 # Licensed under the Apache License, Version 2.0 (the "License");
 #   you may not use this file except in compliance with the License.
 #   You may obtain a copy of the License at
@@ -22,6 +22,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'dcgan.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'alexnet.settings')
 
 application = get_wsgi_application()
