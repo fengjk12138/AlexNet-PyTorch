@@ -1,4 +1,4 @@
-# Copyright 2020 Lorna Authors. All Rights Reserved.
+# Copyright 2019 Lorna Authors. All Rights Reserved.
 # Licensed under the Apache License, Version 2.0 (the "License");
 #   you may not use this file except in compliance with the License.
 #   You may obtain a copy of the License at
@@ -18,19 +18,22 @@ Do not delete this file unless you know how to refactor it!
 ====================================WARNING====================================
 """
 
-from django.conf.urls import url
-from django.contrib import admin
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from django.urls import path
+import os
+import sys
 
-from api.visual_api import Classifier
-from api.visual_api import index
 
-# noinspection PyInterpreter
-urlpatterns = [
-  url(r'^api/cfg', Classifier.as_view(), name="Image classifier"),
-  path('', index),
-  path('admin/', admin.site.urls),
-  url('index/', index, name="index"),
-]
-urlpatterns += staticfiles_urlpatterns()
+def main():
+  os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'cfg.settings')
+  try:
+    from django.core.management import execute_from_command_line
+  except ImportError as exc:
+    raise ImportError(
+      "Couldn't import Django. Are you sure it's installed and "
+      "available on your PYTHONPATH environment variable? Did you "
+      "forget to activate a virtual environment?"
+    ) from exc
+  execute_from_command_line(sys.argv)
+
+
+if __name__ == '__main__':
+  main()
