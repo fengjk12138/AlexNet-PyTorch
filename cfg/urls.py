@@ -28,7 +28,7 @@ from api.visual_api import index
 
 # noinspection PyInterpreter
 urlpatterns = [
-  url(r'^api/alexnet', CartoonSister.as_view(), name="AlexNet Classifier"),
+  url(r'^api/cfg', CartoonSister.as_view(), name="Image classifier"),
   path('', index),
   path('admin/', admin.site.urls),
   url('index/', index, name="index"),
