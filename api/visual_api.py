@@ -4,8 +4,8 @@ from django.shortcuts import render
 from rest_framework.views import APIView
 
 # dcgan
-from alexnet import 
-
+import alexnet.
+from alexnet import AlexNet
 
 # model
 def index(request):
